@@ -197,7 +197,7 @@ chmod +x run.sh
 
 #!/bin/sh
 ~/.npm-global/bin/pm2 kill
-/home/dino/.npm-global/bin/pm2 resurrect >/dev/null 2>&1
+/home/aimheed/.npm-global/bin/pm2 resurrect >/dev/null 2>&1
 sleep 10
 /home/dino/.npm-global/bin/pm2 restart all
 ~/.npm-global/bin/pm2 save
@@ -206,7 +206,7 @@ sleep 10
 ### 3.1 serv00生成密钥对，添加公钥到服务器、并且拿到私钥
 serv00中运行，生成密钥对
 ```
-ssh-keygen -t rsa -b 4096 -C "dino@milaone.app"
+ssh-keygen -t rsa -b 4096 -C "dong@del.pp.ua"
 ``` 
 将公钥并添加到authorized_keys中
     
@@ -255,7 +255,7 @@ on:
   workflow_dispatch:
   schedule:
     # 5分钟运行一次
-    - cron: '0/5 * * * *'
+    - cron: '0/5 * * * *'         (#参考其他cron job修改时间，5min太频繁
     
 
 jobs:
@@ -281,7 +281,7 @@ jobs:
 
     - name: Run script on remote server if service is not running
       if: env.service_status == 'not_running'
-      run: ssh -o StrictHostKeyChecking=no dino@s4.serv00.com "/home/dino/run.sh" #这里改成你的用户名@你的ssh服务器地址，以及/home/你的用户名/run.sh
+      run: ssh -o StrictHostKeyChecking=no aimheed@s4.serv00.com "/home/aimheed/keep.sh" #这里改成你的用户名@你的ssh服务器地址，以及/home/你的用户名/run.sh
 ```
 
 ### 3.5 打开Actions中的自动工作流即可
