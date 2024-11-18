@@ -3,7 +3,7 @@ name: autorun
 on:
   workflow_dispatch:
   schedule:
-    # 每20小时运行一次
+    # 每天7点运行一次
     - cron: '01 7 * * *'
     
 
