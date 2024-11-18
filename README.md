@@ -273,7 +273,7 @@ jobs:
     - name: Check if service is running
       id: check_service
       run: |
-        if curl --head --silent --fail https://memos.milaone.app > /dev/null; then #这里改成你的Web服务的地址
+        if curl --head --silent --fail https://niuniu.ggff.net > /dev/null; then #这里改成你的Web服务的地址,此处就是你的哪吒地址
           echo "service_status=running" >> $GITHUB_ENV
         else
           echo "service_status=not_running" >> $GITHUB_ENV
