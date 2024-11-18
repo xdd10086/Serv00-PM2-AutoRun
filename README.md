@@ -82,7 +82,7 @@ keep.sh的内容，直接复制粘贴
 #!/bin/bash
 
 # 目标URL
-URL="https://memos.milaone.app"
+URL="https://niuniu.ggff.net"
 
 # 远程运行的脚本命令
 RUN_SCRIPT="ssh -i .ssh/serv00key aimheed@s4.serv00.com '/home/aimheed/run.sh'"
@@ -108,7 +108,7 @@ sudo crontab -e
 ---
 ---
 
-## 2. 方法二：利用openwrt远程check https://memos.milaone.app 的运行状态，出错就ssh登录Serv00的ssh运行脚本
+## 2. 方法二：利用openwrt远程check https://niuniu.ggff.net 的运行状态，出错就ssh登录Serv00的ssh运行脚本
 整体思路跟方法一是一样的，只是openwrt中的ssh是dropbear提供的，它不能使用serv00生成的证书
 其实说这个方法，我就是为了说一下openwrt下的ssh是特殊的，大家注意一下
 ### 2.1 在Serv00中部分
@@ -156,7 +156,7 @@ chmod +x keep.sh
 #!/bin/bash
 
 # 目标URL
-URL="https://memos.milaone.app"
+URL="https://niuniu.ggff.net"
 
 # 远程运行的脚本命令
 RUN_SCRIPT="ssh -i /root/.ssh/id_dropbear aimheed@s4.serv00.com '/home/aimheed/run.sh'"
@@ -184,7 +184,7 @@ crontab -e
 ---
 
 
-## 3. 方法三：利用github的Actions中自动工作流脚本每5分钟check一下 https://memos.milaone.app 的运行状态，出错就ssh登录运行脚本
+## 3. 方法三：利用github的Actions中自动工作流脚本每5分钟check一下 https://niuniu.ggff.net 的运行状态，出错就ssh登录运行脚本
 
 ### 3.0 在Serv00中编写PM2恢复快照脚本
 ```
