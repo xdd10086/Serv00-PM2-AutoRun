@@ -23,15 +23,15 @@ chmod +x run.sh
 
 #!/bin/sh
 ~/.npm-global/bin/pm2 kill
-/home/dino/.npm-global/bin/pm2 resurrect >/dev/null 2>&1
+/home/aimheed/.npm-global/bin/pm2 resurrect >/dev/null 2>&1
 sleep 10
-/home/dino/.npm-global/bin/pm2 restart all
+/home/aimheed/.npm-global/bin/pm2 restart all
 ~/.npm-global/bin/pm2 save
 
 ```
 #### 1.1.2 Serv00中生成密钥对
 ```
-ssh-keygen -t rsa -b 4096 -C "dino@milaone.app"
+ssh-keygen -t rsa -b 4096 -C "aimheed@milaone.app" 这个钥匙邮箱随便写
 ```
 #### 1.1.3 将公钥并添加到authorized_keys中
     
@@ -85,7 +85,7 @@ keep.sh的内容，直接复制粘贴
 URL="https://memos.milaone.app"
 
 # 远程运行的脚本命令
-RUN_SCRIPT="ssh -i .ssh/serv00key dino@s4.serv00.com '/home/dino/run.sh'"
+RUN_SCRIPT="ssh -i .ssh/serv00key aimheed@s4.serv00.com '/home/aimheed/run.sh'"
 
 # 检查服务是否运行
 curl --head --silent --fail $URL > /dev/null
@@ -134,9 +134,9 @@ chmod +x run.sh
 
 #!/bin/sh
 ~/.npm-global/bin/pm2 kill
-/home/dino/.npm-global/bin/pm2 resurrect >/dev/null 2>&1
+/home/aimheed/.npm-global/bin/pm2 resurrect >/dev/null 2>&1
 sleep 10
-/home/dino/.npm-global/bin/pm2 restart all
+/home/aimheed/.npm-global/bin/pm2 restart all
 ~/.npm-global/bin/pm2 save
 
 ```
@@ -159,7 +159,7 @@ chmod +x keep.sh
 URL="https://memos.milaone.app"
 
 # 远程运行的脚本命令
-RUN_SCRIPT="ssh -i /root/.ssh/id_dropbear dino@s4.serv00.com '/home/dino/run.sh'"
+RUN_SCRIPT="ssh -i /root/.ssh/id_dropbear aimheed@s4.serv00.com '/home/aimheed/run.sh'"
 
 # 检查服务是否运行
 curl --head --silent --fail $URL > /dev/null
@@ -199,7 +199,7 @@ chmod +x run.sh
 ~/.npm-global/bin/pm2 kill
 /home/aimheed/.npm-global/bin/pm2 resurrect >/dev/null 2>&1
 sleep 10
-/home/dino/.npm-global/bin/pm2 restart all
+/home/aimheed/.npm-global/bin/pm2 restart all
 ~/.npm-global/bin/pm2 save
 
 ```
