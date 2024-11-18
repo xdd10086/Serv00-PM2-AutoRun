@@ -22,12 +22,11 @@ jobs:
     - name: Check if service is running
       id: check_service
       run: |
-        if curl --head --silent --fail https://niuniu.ggff.net != 0 /dev/null;  then #这里改成你的哪吒的地址
+        if curl --head --silent --fail https://niuniu.ggff.net != 0 /dev/null;  then 
           echo "service_status=running" >> $GITHUB_ENV
         else
           echo "service_status=not_running" >> $GITHUB_ENV
-          #mail -s "Service Alert" 282388867@qq.com
-        fi
+      fi
 
     - name: Run script on remote server if service is not running
       if: env.service_status == 'not_running'
