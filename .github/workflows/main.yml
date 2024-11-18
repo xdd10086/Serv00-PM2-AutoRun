@@ -26,7 +26,7 @@ jobs:
           echo "service_status=running" >> $GITHUB_ENV
         else
           echo "service_status=not_running" >> $GITHUB_ENV
-          mail -s "Service Alert" 282388867@qq.com
+          #mail -s "Service Alert" 282388867@qq.com
         fi
 
     - name: Run script on remote server if service is not running
