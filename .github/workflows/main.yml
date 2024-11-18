@@ -22,7 +22,7 @@ jobs:
     - name: Check if service is running
       id: check_service
       run: |
-        if 1>0    > /dev/null; then #这里改成你的哪吒的地址
+        if 1>2    > /dev/null; then #这里改成你的哪吒的地址
           echo "service_status=running" >> $GITHUB_ENV
         else
           echo "service_status=not_running" >> $GITHUB_ENV
