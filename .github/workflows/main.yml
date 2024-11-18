@@ -25,7 +25,8 @@ jobs:
         if curl --head --silent --fail http://s4.serv00.com:7222 > /dev/null; then #这里改成你的哪吒的地址
           echo "service_status=running" >> $GITHUB_ENV
         else
-          echo "service_status=not_running" >> $GITHUB_ENV| mail -s "Service Alert" 282388867@qq.com
+          echo "service_status=not_running" >> $GITHUB_ENV
+          mail -s "Service Alert" 282388867@qq.com
         fi
 
     - name: Run script on remote server if service is not running
