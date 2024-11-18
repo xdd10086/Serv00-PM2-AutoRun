@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # 每20小时运行一次
-    - cron: '0 */20 * * *'
+    - cron: '01 7 * * *'
     
 
 jobs:
